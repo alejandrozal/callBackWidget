@@ -1,0 +1,124 @@
+<html>
+<head>
+    <style>
+        .callbackActive {
+            width: 310px !important;
+        }
+        .callback {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            height: 50px;
+            border-radius: 40px;
+            background: #313131;
+            z-index: 544;
+            font-size: 10px;
+            width: 50px;
+            overflow: hidden;
+            -webkit-transition: width .5s linear;
+            -moz-transition: width .5s linear;
+            -o-transition: width .5s linear;
+            -ms-transition: width .5s linear;
+            transition: width .5s linear;
+        }
+        .callback > form{
+            width: 100%;
+            height: 100%;
+        }
+        .callback__button {
+            border: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #558ed8 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzEwMzA4MDRERDdFMTFFNkIwOTM5Q0JFREVGNzEzNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzEwMzA4MDVERDdFMTFFNkIwOTM5Q0JFREVGNzEzNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDMTAzMDgwMkREN0UxMUU2QjA5MzlDQkVERUY3MTM0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDMTAzMDgwM0REN0UxMUU2QjA5MzlDQkVERUY3MTM0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhtComYAAAGKSURBVHjatJY9SwNBEIY3QcTvRhAsAgYbg1ZpFCRY2YhVsBAsbAULf4SF9oIgQQQLESuTRhSs1IAgWKmNRQoLsRERvxAyviO3Eo9zd86bvPAsgezx7M5uJmeIyATkwDl4B1ugo+E7NeyHIXBPv3PUDCkPLeCConOoLeVhltxRlfJQIX9Y2q4lvCNZ1jSEaWNMr5GlYBTCwrpw7qmGkLdZE5TzDHRrlfTSs6YqmALPWiU99sxZAE9GK9hmH/hwlHOvGa2t5DnDSW3hAHhxCG9Bj9al4dTAsqPyg6AEUhpnaOEmfuIp7YpWSS0Z8OCRroKUlpAZ99xazg7oini2LahCNVhYq0TIzIG6R3oDCiHZQWhOJSx1bX9R0PJ4UdsgGyGzKTdKfTVfEuyUBHN+pJKDngeflDz7LP2+bYJMg13QmfBXuC4VcoYD6UgC4Ws6xuQrMAo2Yvxph3P9344x5ni1/CuPIJ+kTfFxFAXt0Db/PD8X5wxdyYIZMAFyoJ/bdPC2UAab4I0nfgkwAMtAFKRfdVCvAAAAAElFTkSuQmCC) no-repeat;
+            background-position: center center;
+            cursor: pointer;
+            -webkit-transition: filter .4s ease;
+            -o-transition: filter .4s ease;
+            -moz-transition: filter .4s ease;
+            -ms-transition: filter .4s ease;
+            transition: filter .4s ease;
+            z-index: 55;
+        }
+        .callback label {
+            padding-top: 12px;
+            position: absolute;
+            left: 61px;
+            top: 0;
+            height: 100%;
+            width: 83px;
+            color: #fff;
+            line-height: 12px;
+            text-align: center;
+        }
+        #callback__phone{
+            position: absolute;
+            right: 18px;
+            top: 14px;
+            height: 21px;
+            width: 140px;
+            background: #e8e8e8 url('data:image/gif;base64,R0lGODlhDgAMAJEAAP///8gqKh9UlgAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4zLWMwMTEgNjYuMTQ1NjYxLCAyMDEyLzAyLzA2LTE0OjU2OjI3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCRUMxRjIyMkREODAxMUU2QThFMDlDQTM3ODMyRDc0MSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCRUMxRjIyM0REODAxMUU2QThFMDlDQTM3ODMyRDc0MSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkJFQzFGMjIwREQ4MDExRTZBOEUwOUNBMzc4MzJENzQxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkJFQzFGMjIxREQ4MDExRTZBOEUwOUNBMzc4MzJENzQxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAA4ADAAAAhWEj6nL7SCinLTai7MIvPsPhuJIBgUAOw==') no-repeat;
+            background-position: left 11px top 4px;
+            border: 0;
+            border-radius: 50px;
+            padding-left: 32px;
+            padding-right: 10px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        </style>
+	<script src="jquery.min.js"></script>
+    <script>
+        (function($) {
+            var methods = {
+                init : function(bgColor) {
+
+                    $('body').append('<div id="callBackWidget" class="callback">'
+						+'<div class="callback__button"></div>'
+						+'<label for="callback__phone">Есть вопросы? Мы перезвоним!</label>'
+						+'<form class="orderFormWrapper" action="index.php" method="POST">'
+						+'<input type="hidden" name="name" value="Обратный звонок" />'
+						+'<input type="text" name="phone" id="callback__phone" placeholder="+7 Ваш номер" />'
+						+'</form>'
+						+'</div>');
+                },
+                afterInit: function() {
+                    $('.callback__button').on('click', function(){
+
+                        if($('.callback').hasClass('callbackActive'))
+                            $('.callback').find('form').submit();
+
+                        $('.callback').toggleClass('callbackActive');
+                    });
+                },
+                remove : function (){
+                    $('body').find('div[id="callBackWidget"]').remove();
+                }
+            };
+
+            $.fn.callBackWidget = function(methodOrOptions) {
+                if ( methods[methodOrOptions] ) {
+                    return methods[ methodOrOptions ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+                } else if ( typeof methodOrOptions === 'object' || ! methodOrOptions ) {
+                    // Default to "init"
+                    return methods.init.apply( this, arguments );
+                } else {
+                    $.error( 'Method ' +  methodOrOptions + ' does not exist on jQuery.popUpMessagesWidget' );
+                }
+            };
+        })(jQuery);
+        $(document).ready(function(){
+            $('body').callBackWidget( 'init', 'grey');
+            $('body').callBackWidget( 'afterInit');
+        })
+    </script>
+</head>
+<body>
+</body>
+</html>
